@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    @product_lists = @order.product_listss
+    @product_lists = @order.product_lists
   end
 
   def create
