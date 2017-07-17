@@ -1,0 +1,2 @@
+class AddTokenToOrder < ApplicationRecord
+end

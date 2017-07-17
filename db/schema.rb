@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717125637) do
+ActiveRecord::Schema.define(version: 20170717134431) do
+
+  create_table "add_token_to_orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -34,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170717125637) do
     t.string   "shipping_address"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "token"
   end
 
   create_table "product_lists", force: :cascade do |t|
